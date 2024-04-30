@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="GoogleBigQuery" id="GoogleBigQuery-82e" database="GoogleBigQuery" >
+	<schema name="dbt_guallpaj" catalogname="testingproject-384800" >
+		<table name="dim_bike" spec="" >
+			<column name="ride_id" type="string" jt="12" />
+			<column name="rideable_type" type="string" jt="12" />
+			<column name="member_casual" type="string" jt="12" />
+		</table>
+		<table name="dim_date" spec="" >
+			<column name="ride_id" type="string" jt="12" />
+			<column name="started_at" type="timestamp" jt="93" />
+			<column name="ended_at" type="timestamp" jt="93" />
+			<column name="month" type="string" jt="12" />
+			<column name="day_of_week" type="string" jt="12" />
+			<column name="hour" type="int64" jt="4" />
+		</table>
+		<table name="dim_location" spec="" >
+			<column name="ride_id" type="string" jt="12" />
+			<column name="start_latitude" type="string" jt="12" />
+			<column name="start_longitude" type="string" jt="12" />
+			<column name="end_latitude" type="string" jt="12" />
+			<column name="end_longitude" type="string" jt="12" />
+			<column name="start_station_name" type="string" jt="12" />
+			<column name="end_station_name" type="string" jt="12" />
+		</table>
+		<table name="facts_bike" spec="" >
+			<column name="ride_id" type="string" jt="12" />
+			<column name="time_duration" type="string" jt="12" />
+			<column name="distance_miles" type="string" jt="12" />
+		</table>
+	</schema>
+	<layout name="Main Layout" id="Layout-1fb0" show_relation="columns" >
+		<entity schema="testingproject-384800.dbt_guallpaj" name="dim_bike" color="3986C1" x="68" y="255" />
+		<entity schema="testingproject-384800.dbt_guallpaj" name="dim_date" color="3986C1" x="272" y="391" />
+		<entity schema="testingproject-384800.dbt_guallpaj" name="dim_location" color="3986C1" x="459" y="255" />
+		<entity schema="testingproject-384800.dbt_guallpaj" name="facts_bike" color="3986C1" x="272" y="255" />
+		<callout x="51" y="51" pointer="Round" >
+			<comment><![CDATA[This is a layout. You can create multiple layouts with the same or different tables. 
+
+Edit tables by double-clicking the table headers.]]></comment>
+		</callout>
+	</layout>
+	<layout name="~Layout with Sample Tools" id="Layout-236a" show_column_type="y" show_relation="columns" >
+		<entity schema="testingproject-384800.dbt_guallpaj" name="dim_bike" color="3986C1" x="51" y="51" />
+		<entity schema="testingproject-384800.dbt_guallpaj" name="dim_location" color="3986C1" x="306" y="51" />
+		<script name="SQL Editor" id="Editor-ec4" language="SQL" >
+			<string><![CDATA[SELECT
+	ride_id, rideable_type, member_casual
+FROM
+	`testingproject-384800`.dbt_guallpaj.dim_bike e;]]></string>
+		</script>
+		<browser id="Browse-23c2" name="Relational Data Explorer" confirm_updates="y" >
+			<browse_table schema="testingproject-384800.dbt_guallpaj" entity="dim_bike" x="-2147483648" y="-2147483648" width="-2147483648" height="-2147483648" />
+		</browser>
+		<query id="Query-fea" name="Query Builder" >
+			<query_table schema="testingproject-384800.dbt_guallpaj" name="dim_bike" alias="db" x="51" y="51" >
+				<column name="ride_id" />
+				<column name="rideable_type" />
+				<column name="member_casual" />
+			</query_table>
+		</query>
+		<form name="Report" id="Report-997" template="Page" css="container-fluid" view="frame" >
+			<var name="samplePageNumber" type="4" value="0" mandatory="n" />
+			<var name="sampleRecordsPerPage" type="4" value="100" mandatory="n" />
+			<body name="Body" template="Grid" max_records="100" pos="0,0,0,0,f,f" layout="{{-2,-2,-2,-2,-1},{-2,-2,-2,-2}}" generate_path="y" scroll="n" html="n" header_rows="0" footer_rows="0" >
+				<cell type="label" name="Dim_bike Data" template="H3" pos="0,0,1,0,l,c" />
+				<cell type="chart" name="Pie" template="Pie" pos="0,1,4,1,l,c" max_records="20" generate_path="y" >
+					<form_script type="DataSource" language="SQL" >
+						<var name="ride_id" />
+						<var name="rideable_type" />
+						<var name="member_casual" />
+						<script ><![CDATA[SELECT * FROM `testingproject-384800`.dbt_guallpaj.dim_bike]]></script>
+					</form_script>
+					<param name="item" value="ride_id" />
+					<param name="width" value="100%" />
+					<param name="title" value="Sample Chart" />
+					<param name="height" value="400px" />
+				</cell>
+				<tableview name="sample" template="Table" max_records="100" css="sortable table table-striped table-sm table-hover" pos="0,2,4,2,f,f" layout="{{-2,-2,-2,-2},{-2,-2}}" generate_path="y" scroll="n" html="n" header_rows="1" footer_rows="0" >
+					<form_script type="DataSource" language="SQL" >
+						<var name="ride_id" />
+						<var name="rideable_type" />
+						<var name="member_casual" />
+						<script ><![CDATA[SELECT * FROM `testingproject-384800`.dbt_guallpaj.dim_bike]]></script>
+					</form_script>
+					<cell type="label" name="ride_id" pos="0,0,0,0,c,c" />
+					<cell type="label" name="rideable_type" pos="1,0,1,0,c,c" />
+					<cell type="label" name="member_casual" pos="2,0,2,0,c,c" />
+					<cell type="label" name="${ride_id}" template="Plain" pos="0,1,0,1,l,c" />
+					<cell type="label" name="${rideable_type}" template="Plain" pos="1,1,1,1,l,c" />
+					<cell type="label" name="${member_casual}" template="Plain" pos="2,1,2,1,l,c" />
+					<cell type="button" name="More" template="Plain" css="btn btn-sm btn-secondary" pos="3,1,3,1,c,c" ref_id="Report-997" />
+				</tableview>
+				<cell type="href" name="" disabled="${samplePageNumber&lt;1}" pos="0,3,0,3,l,c" glyph="bi-chevron_double_left" ref_id="Report-997" >
+					<var name="samplePageNumber" value="0" />
+				</cell>
+				<cell type="href" name="" disabled="${samplePageNumber&lt;1}" pos="1,3,1,3,l,c" glyph="bi-chevron_left" ref_id="Report-997" >
+					<var name="samplePageNumber" value="${Math.max(0,samplePageNumber-1)}" />
+				</cell>
+				<cell type="label" name="Page ${samplePageNumber+1}" pos="2,3,2,3,l,c" />
+				<cell type="href" name="" disabled="${!sampleHasNextPage}" pos="3,3,3,3,l,c" glyph="bi-chevron_right" ref_id="Report-997" >
+					<var name="samplePageNumber" value="${( samplePageNumber+1 )}" />
+				</cell>
+			</body>
+		</form>
+	</layout>
+</project>
