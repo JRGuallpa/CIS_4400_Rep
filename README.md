@@ -17,7 +17,7 @@
   The data comes from Lyft Citi Bike's internal reporting of their Citi Bike usage. Citi Bike riders have accounts that determine whether they're a member or not. Citi Bike riders scan the QR code on Citi Bike through the app at a Citi Bike station. The Citi Bike has its own unique ID, as does the Citi Bike station. When a bike is locked in another dock, data is uploaded within Lyft’s data infrastructure system. When accessing the source, the published data is stored in Amazon's cloud, Amazon Web Services (AWS).
 
 - **Link that shows the data dictionary (excel, google sheets):**  
-  [CIS 4400: Homework 1 Data Dictionary](#)
+  [CIS 4400: Homework 1 Data Dictionary](https://docs.google.com/spreadsheets/d/1e26Uxg2QfM2E1EHMyYk_EFXop6JcWBNwbv08vuyJRPA/edit#gid=24990577)
 
 - **Github/AzureDevops/Jira account created:**  
   [GitHub Account](https://github.com/JRGuallpa)
