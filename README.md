@@ -23,7 +23,7 @@
   [GitHub Account](https://github.com/JRGuallpa)
 
 - **Scripts that gather these data:**  
-  [CIS_4400_Homework_1.ipynb](#)
+  [CIS_4400_Homework_1.ipynb](https://colab.research.google.com/drive/17dCmxcCunS4jcSx-cAnipP_-In7dmn8m?usp=sharing)
 
 - **Git Repository Created:**  
   [CIS 4400 Repository](https://github.com/JRGuallpa/CIS_4400_Rep)
@@ -31,11 +31,11 @@
 #### Data Storage
 - **Storage of choice:**  
   Google Cloud → Buckets
-
 - **Data Stored in an orderly fashion in the storage:**  
   [Data Stored in GitHub Repository](https://github.com/JRGuallpa/CIS_4400_Rep/blob/main/CIS_4400_Homework_1.ipynb)
 
 - **Scripts updated from the first deliverables. You will need to update those scripts to store to data into their specific storage:**  
+
   [Scripts Updated in GitHub Repository](https://github.com/JRGuallpa/CIS_4400_Rep/blob/main/CIS_4400_Homework_1.ipynb)
 
 - **Git repository updated:**  
@@ -47,6 +47,10 @@
   *Under facts and dimension tab*
 
 - **Scripts that create the Data Warehouse:**  
+
+![Screenshot 2024-05-01 at 9.17.33 PM](/Users/Work/Desktop/ScreenShots/Screenshot%202024-05-01%20at%209.17.33%E2%80%AFPM.png)
+
+
   [GitHub Repository](https://github.com/JRGuallpa/CIS_4400_Rep/blob/main/CIS_4400_Homework_1.ipynb)
 
 - **Scripts from previous steps updated:**  
