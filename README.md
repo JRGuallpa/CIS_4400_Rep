@@ -8,6 +8,9 @@
 
 ### Homework 1
 
+#### Google Doc Link for HW #1 
+https://docs.google.com/document/d/1N2o_brnKXJ55e2Cv5lmlfvBvtq2TRCSPPYSq65jyEdI/edit 
+
 #### Data Sourcing 
 - **Link of all data sources:**  
   [Citi Bike System Data](https://citibikenyc.com/system-data)  
